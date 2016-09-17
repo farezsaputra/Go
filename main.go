@@ -18,7 +18,7 @@ func main() {
 		beego.BConfig.WebConfig.DirectoryIndex = true
 		beego.BConfig.WebConfig.StaticDir["/swagger"] = "swagger"
 	}
-	beego.InsertFilter("*", beego.BeforeRouter,auth.Basic("username","password"))
+	beego.InsertFilter("*", beego.BeforeRouter,auth.Basic("username","passwords"))
 	beego.Run()
 }
 
